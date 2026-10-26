@@ -47,8 +47,10 @@ export const Route = createFileRoute("/workshop")({
           "Practical training across the complete BA lifecycle — BRD, FRD, SOP, Use Cases, UAT & more. One week, one real-world project.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/workshop" },
       { name: "twitter:card", content: "summary" },
     ],
+    links: [{ rel: "canonical", href: "/workshop" }],
   }),
   component: WorkshopPage,
 });

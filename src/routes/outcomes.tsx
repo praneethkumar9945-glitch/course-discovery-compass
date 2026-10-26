@@ -1,16 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import skillAiLogo from "@/assets/skill-ai-logo.png";
 import { useEffect, useState } from "react";
 import { TrendingUp, Briefcase, Award, Users, Building2, Rocket } from "lucide-react";
 import { ApplyModal } from "./ug-programs";
 
 export const Route = createFileRoute("/outcomes")({
-  head: () => ({
-    meta: [
-      { title: "Outcomes — Skill Ai School of Business" },
-      { name: "description", content: "Placements, founder roles and salaries achieved by Skill Ai graduates." },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: "Outcomes — Skill AI India",
+      description: "Placements, founder roles and salaries achieved by Skill Ai graduates.",
+      path: "/outcomes",
+    }),
   component: Outcomes,
 });
 

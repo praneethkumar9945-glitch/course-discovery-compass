@@ -474,20 +474,23 @@ export const Route = createFileRoute("/portfolio/$slug")({
     if (!p) throw notFound();
     return { portfolio: p };
   },
-  head: ({ loaderData }) => {
+  head: ({ params, loaderData }) => {
     if (!loaderData) {
       return { meta: [{ title: "Portfolio not found — SKILL AI" }, { name: "robots", content: "noindex" }] };
     }
     const { portfolio } = loaderData;
     const title = `${portfolio.name} — ${portfolio.role} | SKILL AI`;
     const desc = `Professional portfolio of ${portfolio.name}, ${portfolio.role} at SKILL AI.`;
+    const path = `/portfolio/${params.slug}`;
     return {
       meta: [
         { title },
         { name: "description", content: desc },
         { property: "og:title", content: title },
         { property: "og:description", content: desc },
+        { property: "og:url", content: path },
       ],
+      links: [{ rel: "canonical", href: path }],
     };
   },
   notFoundComponent: () => (

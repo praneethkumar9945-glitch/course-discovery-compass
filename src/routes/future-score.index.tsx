@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Maximize2, Minimize2, Volume2, VolumeX } from "lucide-react";
@@ -11,22 +12,13 @@ import { useSound } from "@/hooks/useSound";
 import { calculateResult, type Answers, type PlayerInfo, type ScoreResult } from "@/lib/game";
 
 export const Route = createFileRoute("/future-score/")({
-  head: () => ({
-    meta: [
-      { title: "What's Your Future Score? — Career Discovery Game" },
-      {
-        name: "description",
-        content:
-          "Play a 3-minute interactive career discovery game. Answer 10 questions and reveal your future profile, strengths and skill roadmap.",
-      },
-      { property: "og:title", content: "What's Your Future Score? — Career Discovery Game" },
-      {
-        property: "og:description",
-        content:
-          "Your interests. Your skills. Your possible future. 10 questions, 3 minutes, 1 future profile.",
-      },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: "What's Your Future Score? — Career Discovery Game",
+      description:
+        "Play a 3-minute interactive career discovery game. Answer 10 questions and reveal your future profile, strengths and skill roadmap.",
+      path: "/future-score",
+    }),
   component: FutureScoreGame,
 });
 

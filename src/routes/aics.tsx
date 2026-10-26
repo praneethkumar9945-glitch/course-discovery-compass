@@ -10,6 +10,7 @@ export const Route = createFileRoute("/aics")({
       { property: "og:title", content: "AICS — Artificial Intelligence Career Summit" },
       { property: "og:description", content: "Discover AI. Build Your Future." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/aics" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
@@ -17,6 +18,7 @@ export const Route = createFileRoute("/aics")({
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Lexend:wght@500;700;800&family=Inter:wght@400;500&display=swap",
       },
+      { rel: "canonical", href: "/aics" },
     ],
   }),
   component: AicsPage,

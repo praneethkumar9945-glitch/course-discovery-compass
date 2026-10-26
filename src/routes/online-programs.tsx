@@ -1,16 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import skillAiLogo from "@/assets/skill-ai-logo.png";
 import { useEffect, useState } from "react";
 import { Monitor, Clock, Globe, Zap, PlayCircle, Award } from "lucide-react";
 import { ApplyModal } from "./ug-programs";
 
 export const Route = createFileRoute("/online-programs")({
-  head: () => ({
-    meta: [
-      { title: "Online Programs — Skill Ai School of Business" },
-      { name: "description", content: "Live online cohorts in AI, growth, product and entrepreneurship — taught by founders." },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: "Online Programs — Skill AI India",
+      description: "Live online cohorts in AI, growth, product and entrepreneurship — taught by founders.",
+      path: "/online-programs",
+    }),
   component: OnlinePrograms,
 });
 

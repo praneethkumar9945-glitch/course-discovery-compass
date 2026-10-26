@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import skillAiLogo from "@/assets/skill-ai-logo.png";
 const heroImg = "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?w=1200&q=80&auto=format&fit=crop";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -11,12 +12,12 @@ import {
 import { ApplyModal } from "@/routes/ug-programs";
 
 export const Route = createFileRoute("/ai/gen-ai")({
-  head: () => ({
-    meta: [
-      { title: "Master's in Gen AI & Agentic AI — 10 Month Program | Skill Ai" },
-      { name: "description", content: "Skill AI's flagship 10-month Master's in GenAI & Agentic AI — 480 hours, 9 modules, from Python foundations to multi-agent production systems with a Company-sourced capstone." },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: "Master's in Gen AI & Agentic AI — 10 Month Program | Skill AI India",
+      description: "Skill AI's flagship 10-month Master's in GenAI & Agentic AI — 480 hours, 9 modules, from Python foundations to multi-agent production systems with a Company-sourced capstone.",
+      path: "/ai/gen-ai",
+    }),
   component: GenAiAgenticPage,
 });
 

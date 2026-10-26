@@ -1,19 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import { BarChart3 } from "lucide-react";
 import { CourseDetail } from "@/components/CourseDetail";
 import heroImg from "@/assets/card-pm.jpg";
 
 export const Route = createFileRoute("/ai/product-management")({
-  head: () => ({
-    meta: [
-      { title: "Advanced Product Management — Skill Ai" },
-      {
-        name: "description",
-        content:
-          "24-week industry-embedded Advanced Product Management programme — strategy, engineering, data, AI. 288 hours, 144 sessions, 12 modules, capstone on a live partner brief.",
-      },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: "Advanced Product Management — Skill AI India",
+      description:
+        "24-week industry-embedded Advanced Product Management programme — strategy, engineering, data, AI. 288 hours, 144 sessions, 12 modules, capstone on a live partner brief.",
+      path: "/ai/product-management",
+    }),
   component: () => (
     <CourseDetail
       eyebrow="Advanced Programme · Industry-Embedded"

@@ -1,16 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import skillAiLogo from "@/assets/skill-ai-logo.png";
 import { useEffect, useState } from "react";
 import { Rocket, DollarSign, Users, Lightbulb, Building2, TrendingUp, CheckCircle2 } from "lucide-react";
 import { ApplyModal } from "./ug-programs";
 
 export const Route = createFileRoute("/incubation")({
-  head: () => ({
-    meta: [
-      { title: "Incubation — Skill Ai Startup Lab" },
-      { name: "description", content: "Funding, mentorship, and infra to take your idea from zero to revenue at Skill Ai Startup Lab." },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: "Incubation — Skill AI Startup Lab",
+      description: "Funding, mentorship, and infra to take your idea from zero to revenue at Skill Ai Startup Lab.",
+      path: "/incubation",
+    }),
   component: Incubation,
 });
 

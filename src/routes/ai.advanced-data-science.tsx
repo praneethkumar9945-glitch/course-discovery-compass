@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import { submitApplication } from "@/lib/php-api";
 import skillAiLogo from "@/assets/skill-ai-logo.png";
 import heroImg from "@/assets/card-ads.jpg";
@@ -12,12 +13,12 @@ import {
 import { ApplyModal } from "@/routes/ug-programs";
 
 export const Route = createFileRoute("/ai/advanced-data-science")({
-  head: () => ({
-    meta: [
-      { title: "Advanced Core Data Science — 3 Month Program | Skill Ai" },
-      { name: "description", content: "12-week Advanced Core Data Science program: statistics, ML, time series, deep learning, MLOps & industry capstones. 144 hours, 72 sessions." },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: "Advanced Core Data Science — 3 Month Program | Skill AI India",
+      description: "12-week Advanced Core Data Science program: statistics, ML, time series, deep learning, MLOps & industry capstones. 144 hours, 72 sessions.",
+      path: "/ai/advanced-data-science",
+    }),
   component: AdvancedDataSciencePage,
 });
 
