@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import skillAiLogo from "@/assets/skill-ai-logo.png";
 import { useEffect, useState } from "react";
 import { ApplyModal } from "@/routes/ug-programs";
@@ -12,12 +13,13 @@ import imgDatasec from "@/assets/card-datasec.jpg";
 import imgProductManagement from "@/assets/card-pm.jpg";
 
 export const Route = createFileRoute("/ai/")({
-  head: () => ({
-    meta: [
-      { title: "AI Programs — Skill Ai" },
-      { name: "description", content: "AI programs at Skill Ai: Gen AI, Agentic AI, Big Data, Data Science, Cyber Security, Data Security and AI Product Management." },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: "AI, Generative AI and Data Science Courses in Mangalore | Skill AI India",
+      description:
+        "Generative AI, Agentic AI, Big Data, Data Science, Cyber Security and AI Product Management programs at Skill AI India, Mangalore — with live projects and placement support.",
+      path: "/ai",
+    }),
   component: AIPrograms,
 });
 
@@ -57,8 +59,9 @@ function AIPrograms() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_20%,oklch(0.72_0.2_50/0.25),transparent_60%)]" />
         <div className="mx-auto max-w-7xl reveal">
           <span className="inline-flex items-center gap-2 rounded-full border border-lime/30 bg-lime/5 px-4 py-1.5 text-xs font-semibold text-lime"><Sparkles className="h-3.5 w-3.5" /> Artificial Intelligence</span>
-          <h1 className="mt-5 text-5xl font-black tracking-tight md:text-7xl">Build with <span className="text-gradient-lime">AI, not around it</span>.</h1>
-          <p className="mt-5 max-w-2xl text-lg text-muted-foreground">Programs that go beyond theory — ship LLM apps, data pipelines and AI products with mentors from leading AI teams.</p>
+          <h1 className="mt-5 text-4xl font-black tracking-tight sm:text-5xl md:text-7xl">AI, Generative AI and Data Science Courses</h1>
+          <p className="mt-3 text-xl font-medium text-foreground/80">Build with <span className="text-gradient-lime">AI, not around it</span>.</p>
+          <p className="mt-4 max-w-2xl text-lg text-muted-foreground">Programs that go beyond theory — ship LLM apps, data pipelines and AI products with mentors from leading AI teams.</p>
         </div>
       </section>
 

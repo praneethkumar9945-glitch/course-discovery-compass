@@ -15,9 +15,9 @@ import demodayImg from "@/assets/demoday.jpg";
 export const Route = createFileRoute("/")({
   head: () =>
     pageHead({
-      title: "Skill AI India — AI, Multimedia & Management Courses in Mangalore with Placement Support",
+      title: "AI Courses in Mangalore | Skill AI India",
       description:
-        "Job-oriented AI, Data Science, Multimedia, Management and UG/PG degree courses in Mangalore, Karnataka. Live company projects, internships and placement support. Enquire for free counselling.",
+        "Explore AI and technology courses in Mangalore at Skill AI India, including Generative AI, Data Science, Big Data, Cybersecurity, Graphic Design and Digital Marketing.",
       path: "/",
       ogType: "website",
       schemas: [orgJsonLd()],
@@ -187,11 +187,14 @@ function Index() {
           <div className="reveal max-w-3xl">
             <div className="mb-3 text-xs sm:text-sm font-medium uppercase tracking-widest text-mint">Admissions Open · 2026 Cohort · Mangalore</div>
             <h1 className="text-[2.25rem] sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight">
-              Start Your Career With <br />
-              <span className="text-gradient-lime">Skill AI, Mangalore</span>
+              AI, Technology and Career-Focused <br />
+              Courses in <span className="text-gradient-lime">Mangalore</span>
             </h1>
+            <p className="mt-3 text-base sm:text-lg font-medium text-foreground/80">
+              Start your career with Skill AI India — Learn Skill, Get Job.
+            </p>
             <p className="mt-4 max-w-2xl text-base sm:text-lg text-muted-foreground">
-              Job-ready <span className="font-semibold text-foreground">AI, Multimedia, Management and UG/PG courses in Mangalore</span> — taught through live company projects, internships and placement support.
+              Job-ready <span className="font-semibold text-foreground">AI courses in Mangalore</span> with Multimedia, Management and UG/PG programs — taught through live company projects, internships and placement support.
             </p>
 
             <div className="mt-6 sm:mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm">

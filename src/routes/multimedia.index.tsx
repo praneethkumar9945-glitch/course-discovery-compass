@@ -100,8 +100,9 @@ function MultimediaIndex() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_70%_20%,oklch(0.72_0.2_50/0.25),transparent_60%)]" />
         <div className="mx-auto max-w-7xl reveal">
           <span className="inline-flex items-center gap-2 rounded-full border border-lime/30 bg-lime/5 px-4 py-1.5 text-xs font-semibold text-lime"><Sparkles className="h-3.5 w-3.5" /> Multimedia</span>
-          <h1 className="mt-5 text-5xl font-black tracking-tight md:text-7xl">Tell stories that <span className="text-gradient-lime">move people</span>.</h1>
-          <p className="mt-5 max-w-2xl text-lg text-muted-foreground">AI-integrated multimedia tracks — design, video, animation, film and marketing. Industry-grade studios, AI-augmented workflows and live client briefs.</p>
+          <h1 className="mt-5 text-4xl font-black tracking-tight sm:text-5xl md:text-7xl">Graphic Design, Video Editing and Multimedia Courses</h1>
+          <p className="mt-3 text-xl font-medium text-foreground/80">Tell stories that <span className="text-gradient-lime">move people</span>.</p>
+          <p className="mt-4 max-w-2xl text-lg text-muted-foreground">AI-integrated multimedia tracks — design, video, animation, film and marketing. Industry-grade studios, AI-augmented workflows and live client briefs.</p>
         </div>
       </section>
 

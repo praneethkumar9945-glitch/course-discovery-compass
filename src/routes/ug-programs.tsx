@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import { submitApplication } from "@/lib/php-api";
 import skillAiLogo from "@/assets/skill-ai-logo.png";
 import { useEffect, useState } from "react";
@@ -6,12 +7,13 @@ import { ArrowRight, GraduationCap, Briefcase, Calculator, BookOpen, Sparkles, C
 
 
 export const Route = createFileRoute("/ug-programs")({
-  head: () => ({
-    meta: [
-      { title: "UG / PG Programs — Skill Ai School of Business" },
-      { name: "description", content: "Undergraduate (BCA, BBA, BCom, BA) and Postgraduate (MBA, MCA, MCom, MA) programs at Skill Ai — built for the AI era." },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: "Undergraduate and Postgraduate Programs at Skill AI India",
+      description:
+        "Undergraduate (BCA, BBA, BCom, BA) and Postgraduate (MBA, MCA, MCom, MA) degree programs at Skill AI India, Mangalore — redesigned for the AI era with live projects and founder mentors.",
+      path: "/ug-programs",
+    }),
   component: UGPrograms,
 });
 
@@ -200,10 +202,13 @@ function UGPrograms() {
           <span className="inline-flex items-center gap-2 rounded-full border border-lime/30 bg-lime/5 px-4 py-1.5 text-xs font-semibold text-lime">
             <Sparkles className="h-3.5 w-3.5" /> Undergraduate & Postgraduate Programs
           </span>
-          <h1 className="mt-5 text-5xl font-black tracking-tight md:text-7xl">
-            UG & PG that build <span className="text-gradient-lime">real careers</span>.
+          <h1 className="mt-5 text-4xl font-black tracking-tight sm:text-5xl md:text-7xl">
+            Undergraduate and Postgraduate Programs at Skill AI India
           </h1>
-          <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
+          <p className="mt-3 text-xl font-medium text-foreground/80">
+            UG &amp; PG that build <span className="text-gradient-lime">real careers</span>.
+          </p>
+          <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
             Four undergraduate and four postgraduate degrees, redesigned for the AI era. Live projects, founder mentors, and real placements from day one.
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-sm">
