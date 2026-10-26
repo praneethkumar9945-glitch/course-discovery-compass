@@ -35,7 +35,9 @@ export const Route = createFileRoute("/management/finance-accounting")({
       { property: "og:description", content: "Modern finance skills — books, taxation, FP&A and valuation with live client work." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "/management/finance-accounting" },
     ],
+  links: [{ rel: "canonical", href: "/management/finance-accounting" }],
   }),
   component: () => (
     <MultimediaCourseDetail

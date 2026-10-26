@@ -31,7 +31,9 @@ export const Route = createFileRoute("/management/people-operations")({
       { property: "og:description", content: "HR, talent ops and culture for fast-growing companies, with a live hiring drive." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "/management/people-operations" },
     ],
+  links: [{ rel: "canonical", href: "/management/people-operations" }],
   }),
   component: () => (
     <MultimediaCourseDetail

@@ -35,7 +35,9 @@ export const Route = createFileRoute("/management/sales-business-development")({
       { property: "og:description", content: "Learn B2B and B2C selling with a live pipeline and real closed deals." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "/management/sales-business-development" },
     ],
+  links: [{ rel: "canonical", href: "/management/sales-business-development" }],
   }),
   component: () => (
     <MultimediaCourseDetail

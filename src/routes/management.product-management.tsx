@@ -35,7 +35,9 @@ export const Route = createFileRoute("/management/product-management")({
       { property: "og:description", content: "Discovery, roadmaps, metrics and shipping — for SaaS and consumer products." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "/management/product-management" },
     ],
+  links: [{ rel: "canonical", href: "/management/product-management" }],
   }),
   component: () => (
     <MultimediaCourseDetail

@@ -35,7 +35,9 @@ export const Route = createFileRoute("/management/marketing-growth")({
       { property: "og:description", content: "Brand, performance, SEO and growth — with real campaigns for partner brands." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "/management/marketing-growth" },
     ],
+  links: [{ rel: "canonical", href: "/management/marketing-growth" }],
   }),
   component: () => (
     <MultimediaCourseDetail
