@@ -1,10 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import { Lock } from "lucide-react";
 import { CourseDetail } from "@/components/CourseDetail";
 import heroImg from "@/assets/card-datasec.jpg";
 
 export const Route = createFileRoute("/ai/data-security")({
-  head: () => ({ meta: [{ title: "Certificate in Data Security — Skill Ai" }, { name: "description", content: "Protect data at rest, in transit and in use — a focused data security certificate." }] }),
+    head: () =>
+    pageHead({
+      title: "Certificate in Data Security — Skill Ai",
+      description: "Protect data at rest, in transit and in use — a focused data security certificate.",
+      path: "/ai/data-security",
+    }),
+
   component: () => (
     <CourseDetail
       eyebrow="Certificate Program"

@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import { Wand2, Layers, Box, Film, Sparkles, Zap, Cpu, PenTool, Rocket, Briefcase } from "lucide-react";
 import { MultimediaCourseDetail, type MMModule } from "@/components/MultimediaCourseDetail";
 import heroImg from "@/assets/card-mm-anim.jpg";
@@ -27,7 +28,13 @@ const MODULES: MMModule[] = [
 ];
 
 export const Route = createFileRoute("/multimedia/animation-vfx")({
-  head: () => ({ meta: [{ title: "Animation & VFX — Skill Ai" }, { name: "description", content: "12-week Animation & VFX program: Blender, Cinema 4D, Houdini, Nuke and AI-assisted pipelines for film and streaming." }] }),
+    head: () =>
+    pageHead({
+      title: "Animation & VFX — Skill Ai",
+      description: "12-week Animation & VFX program: Blender, Cinema 4D, Houdini, Nuke and AI-assisted pipelines for film and streaming.",
+      path: "/multimedia/animation-vfx",
+    }),
+
   component: () => (
     <MultimediaCourseDetail
       eyebrow="Multimedia · Animation & VFX"

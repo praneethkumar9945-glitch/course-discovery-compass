@@ -1,10 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import { Database } from "lucide-react";
 import { CourseDetail } from "@/components/CourseDetail";
 import heroImg from "@/assets/card-big-data.jpg";
 
 export const Route = createFileRoute("/ai/big-data")({
-  head: () => ({ meta: [{ title: "Master's in AI, Big Data & Advanced MLOps — Skill Ai" }, { name: "description", content: "12-month Master's in AI, Big Data & Advanced MLOps — 10 modules, 275 sessions: Python, SQL/NoSQL, Data Science, Hadoop, Spark, Kafka, Cloud, Tableau/Power BI, MLOps, Deep Learning, CV, NLP, GenAI & Agentic AI." }] }),
+    head: () =>
+    pageHead({
+      title: "Master's in AI, Big Data & Advanced MLOps — Skill Ai",
+      description: "12-month Master's in AI, Big Data & Advanced MLOps — 10 modules, 275 sessions: Python, SQL/NoSQL, Data Science, Hadoop, Spark, Kafka, Cloud, Tableau/Power BI, MLOps, Deep Learning, CV, NLP, GenAI & Agentic AI.",
+      path: "/ai/big-data",
+    }),
+
   component: () => (
     <CourseDetail
       eyebrow="Master's Programme · Industry-Embedded"

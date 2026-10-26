@@ -1,10 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import { Cpu } from "lucide-react";
 import { CourseDetail } from "@/components/CourseDetail";
 import heroImg from "@/assets/card-bd-cert.jpg";
 
 export const Route = createFileRoute("/ai/big-data-cert")({
-  head: () => ({ meta: [{ title: "Certificate in Big Data — Skill Ai" }, { name: "description", content: "Fast-track certificate in Big Data engineering — Spark, Hadoop, cloud data pipelines." }] }),
+    head: () =>
+    pageHead({
+      title: "Certificate in Big Data — Skill Ai",
+      description: "Fast-track certificate in Big Data engineering — Spark, Hadoop, cloud data pipelines.",
+      path: "/ai/big-data-cert",
+    }),
+
   component: () => (
     <CourseDetail
       eyebrow="Certificate Program"

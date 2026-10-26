@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import skillAiLogo from "@/assets/skill-ai-logo.png";
 import { useEffect, useState } from "react";
 import { Briefcase, TrendingUp, Users, Target, DollarSign, Sparkles, ArrowRight, Clock, BarChart3 } from "lucide-react";
@@ -11,12 +12,13 @@ import imgPpl from "@/assets/mg-ppl.jpg";
 import imgPm from "@/assets/mg-pm.jpg";
 
 export const Route = createFileRoute("/management/")({
-  head: () => ({
-    meta: [
-      { title: "Management Programs — Skill Ai" },
-      { name: "description", content: "Management programs at Skill Ai: business leadership, marketing, sales, finance and operations." },
-    ],
-  }),
+    head: () =>
+    pageHead({
+      title: "Management, Business and Marketing Courses in Mangalore | Skill AI India",
+      description: "Management programs at Skill AI India, Mangalore: business & entrepreneurship, marketing, sales, finance, accounting and people operations.",
+      path: "/management/",
+    }),
+
   component: Management,
 });
 

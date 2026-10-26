@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import { Clapperboard, Camera, Mic, Film, Users, PenTool, Sparkles, Sun, Scissors, Briefcase } from "lucide-react";
 import { MultimediaCourseDetail, type MMModule } from "@/components/MultimediaCourseDetail";
 import heroImg from "@/assets/card-mm-film.jpg";
@@ -27,7 +28,13 @@ const MODULES: MMModule[] = [
 ];
 
 export const Route = createFileRoute("/multimedia/film-production")({
-  head: () => ({ meta: [{ title: "Film Production — Skill Ai" }, { name: "description", content: "12-week end-to-end Film Production program: writing, directing, cinematography, sound and post — from script to festival." }] }),
+    head: () =>
+    pageHead({
+      title: "Film Production — Skill Ai",
+      description: "12-week end-to-end Film Production program: writing, directing, cinematography, sound and post — from script to festival.",
+      path: "/multimedia/film-production",
+    }),
+
   component: () => (
     <MultimediaCourseDetail
       eyebrow="Multimedia · Filmmaking"

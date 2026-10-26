@@ -1,10 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import { Shield } from "lucide-react";
 import { CourseDetail } from "@/components/CourseDetail";
 import heroImg from "@/assets/card-cyber.jpg";
 
 export const Route = createFileRoute("/ai/cyber-security")({
-  head: () => ({ meta: [{ title: "Expertise in Cyber Security — Skill Ai" }, { name: "description", content: "Become a cyber security expert — offensive, defensive, cloud and AI-era threats." }] }),
+    head: () =>
+    pageHead({
+      title: "Expertise in Cyber Security — Skill Ai",
+      description: "Become a cyber security expert — offensive, defensive, cloud and AI-era threats.",
+      path: "/ai/cyber-security",
+    }),
+
   component: () => (
     <CourseDetail
       eyebrow="Expert Program"

@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import skillAiLogo from "@/assets/skill-ai-logo.png";
 import { useEffect, useState } from "react";
 import { ApplyModal } from "@/routes/ug-programs";
@@ -10,12 +11,13 @@ import imgFilm from "@/assets/card-mm-film.jpg";
 import imgPmsmm from "@/assets/card-mm-pmsmm.jpg";
 
 export const Route = createFileRoute("/multimedia/")({
-  head: () => ({
-    meta: [
-      { title: "Multimedia Programs — Skill Ai" },
-      { name: "description", content: "AI-integrated multimedia programs at Skill Ai: graphic design, video & VFX, animation, film production and marketing." },
-    ],
-  }),
+    head: () =>
+    pageHead({
+      title: "Graphic Design, Video Editing and Multimedia Courses in Mangalore | Skill AI India",
+      description: "AI-integrated multimedia programs at Skill AI India, Mangalore: graphic design, video editing & VFX, animation, film production and performance marketing.",
+      path: "/multimedia/",
+    }),
+
   component: MultimediaIndex,
 });
 

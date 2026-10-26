@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import { Film, Scissors, Wand2, Sparkles, Palette, Music, Zap, Layers, Briefcase, Rocket } from "lucide-react";
 import { MultimediaCourseDetail, type MMModule } from "@/components/MultimediaCourseDetail";
 import heroImg from "@/assets/card-mm-video.jpg";
@@ -27,7 +28,13 @@ const MODULES: MMModule[] = [
 ];
 
 export const Route = createFileRoute("/multimedia/ai-video-editing-vfx")({
-  head: () => ({ meta: [{ title: "AI Integrated Video Editing & VFX — Skill Ai" }, { name: "description", content: "12-week AI-powered video editing and VFX program: Premiere, DaVinci, After Effects, Runway and modern AI compositing." }] }),
+    head: () =>
+    pageHead({
+      title: "AI Integrated Video Editing & VFX — Skill Ai",
+      description: "12-week AI-powered video editing and VFX program: Premiere, DaVinci, After Effects, Runway and modern AI compositing.",
+      path: "/multimedia/ai-video-editing-vfx",
+    }),
+
   component: () => (
     <MultimediaCourseDetail
       eyebrow="AI Integrated · Multimedia"

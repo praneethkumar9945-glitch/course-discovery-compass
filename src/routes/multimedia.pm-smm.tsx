@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import { Megaphone, Target, BarChart3, Search, Users, Sparkles, Zap, TrendingUp, Mail, Briefcase } from "lucide-react";
 import { MultimediaCourseDetail, type MMModule } from "@/components/MultimediaCourseDetail";
 import heroImg from "@/assets/card-mm-pmsmm.jpg";
@@ -27,7 +28,13 @@ const MODULES: MMModule[] = [
 ];
 
 export const Route = createFileRoute("/multimedia/pm-smm")({
-  head: () => ({ meta: [{ title: "Performance Marketing & Social Media Marketing — Skill Ai" }, { name: "description", content: "12-week PM & SMM program: Meta Ads, Google Ads, SEO, GA4, content strategy and AI-powered marketing." }] }),
+    head: () =>
+    pageHead({
+      title: "Performance Marketing & Social Media Marketing — Skill Ai",
+      description: "12-week PM & SMM program: Meta Ads, Google Ads, SEO, GA4, content strategy and AI-powered marketing.",
+      path: "/multimedia/pm-smm",
+    }),
+
   component: () => (
     <MultimediaCourseDetail
       eyebrow="Multimedia · Marketing"

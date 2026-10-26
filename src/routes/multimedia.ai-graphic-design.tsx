@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageHead } from "@/lib/seo";
 import { Palette, Sparkles, Layers, Wand2, Image as ImageIcon, PenTool, Package, Film, Printer, Rocket, Briefcase, BookOpen } from "lucide-react";
 import { MultimediaCourseDetail, type MMModule } from "@/components/MultimediaCourseDetail";
 import heroImg from "@/assets/card-mm-graphic.jpg";
@@ -105,7 +106,13 @@ const MODULES: MMModule[] = [
 ];
 
 export const Route = createFileRoute("/multimedia/ai-graphic-design")({
-  head: () => ({ meta: [{ title: "AI Integrated Graphic Design — Skill Ai CreateX" }, { name: "description", content: "144-hour AI Integrated Graphic Design course (2027 Edition) — 8 software, 6 AI tools, 11 modules, 30–40 portfolio projects. Photoshop, Illustrator, InDesign, Figma, Lightroom, Dimension, Premiere Pro, CorelDRAW + Firefly, ChatGPT Go, Ideogram, Gemini+, Perplexity, Microsoft Designer." }] }),
+    head: () =>
+    pageHead({
+      title: "AI Integrated Graphic Design — Skill Ai CreateX",
+      description: "144-hour AI Integrated Graphic Design course (2027 Edition) — 8 software, 6 AI tools, 11 modules, 30–40 portfolio projects. Photoshop, Illustrator, InDesign, Figma, Lightroom, Dimension, Premiere Pro, CorelDRAW + Firefly, ChatGPT Go, Ideogram, Gemini+, Perplexity, Microsoft Designer.",
+      path: "/multimedia/ai-graphic-design",
+    }),
+
   component: () => (
     <MultimediaCourseDetail
       eyebrow="AI Integrated · 2027 Edition · CreateX"
