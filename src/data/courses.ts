@@ -11,6 +11,8 @@ export type Audience = "class10" | "class12" | "college" | "graduate" | "profess
 export type Interest = "ai" | "data" | "coding" | "cyber" | "design" | "animation" | "video" | "uiux" | "business" | "marketing" | "finance" | "entrepreneurship";
 export type Goal = "job" | "ai-professional" | "freelance" | "startup" | "higher-studies" | "career-switch" | "upskill";
 export type Mode = "online" | "offline" | "hybrid";
+/** Finder choice: a real mode, or "flexible" for "No Preference" (no mode penalty). */
+export type ModeChoice = Mode | "flexible";
 export type TimeBucket = "3-6" | "6-12" | "12-24" | "flexible";
 
 export interface CourseEntry {
@@ -584,7 +586,7 @@ export interface FinderAnswers {
   audience: Audience | null;
   interests: Interest[];
   goal: Goal | null;
-  mode: Mode | null;
+  mode: ModeChoice | null;
   time: TimeBucket | null;
 }
 
@@ -637,7 +639,7 @@ export const GOAL_OPTIONS: { value: Goal; label: string }[] = [
   { value: "upskill", label: "Improve Existing Skills" },
 ];
 
-export const MODE_OPTIONS: { value: Mode; label: string }[] = [
+export const MODE_OPTIONS: { value: ModeChoice; label: string }[] = [
   { value: "online", label: "Online" },
   { value: "offline", label: "Offline" },
   { value: "hybrid", label: "Hybrid" },
